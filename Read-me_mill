@@ -1,0 +1,24 @@
+passos - projeto mil
+
+1 - Procurar APIS para a coleção de dados
+     OBS.1 - considerações (Uso do api_yahoo_finance2 bug que entrega com resultado a penas a baixa. Será usado a API Alpha_vantage)
+ 1.0 - coletar resultados em tempo real das altas/baixas
+ 1.1 - coelção de dados para o dataset
+ 1.2 - dataset com os dados
+ 
+2 - desenvolvimento do algoritimo de reconhecimento do dataset e previsão de altas/baixas
+ 2.0 - procurar o tipo de algoritimo a ser usado
+ 2.1 - procuarar  estratégia e converter em linguagen de maquina(Python)
+ 2.2 - aprendizagen da maquina usando os dados
+
+3 - Integração e automatização das compras do sistema
+ 3.0 - Encontrar o mlhor sistema de trade para a venda e compra de cotações 
+ 3.1 - altomatizar a venda e compra das cotações
+ 3.2 - junção de todas as parte 
+
+4 - fase de testes 
+ 4.0 - treino real do algoritimo 
+ 4.1 - analise de resultados 
+ 4.2 - ACHAR CAPITAL DE INVESTIMENTO INICIAL
+ 4.3 - Decisão do valor de investimento inicial
+ 4.4 - Resultado final!  
