@@ -1,10 +1,11 @@
 passos - projeto mil
 
-1 - Procurar APIS para a coleção de dados
-     OBS.1 - considerações (Uso do api_yahoo_finance2 bug que entrega com resultado a penas a baixa. Será usado a API Alpha_vantage)
- 1.0 - coletar resultados em tempo real das altas/baixas
- 1.1 - coelção de dados para o dataset
- 1.2 - dataset com os dados
+1 - Procurar APIS para a coleção de dados ----- Completo
+     OBS.1 - considerações (Uso do api_yahoo_finance2(DEscartada). Será usado a API Alpha_vantage(Descartada))
+     OBS.2 - Uso de uma nova API IQoptionAPI que entrega os valores em tempo real(https://github.com/Lu-Yi-Hsun/iqoptionapi)
+ 1.0 - coletar resultados em tempo real das altas/baixas----- Completo
+ 1.1 - coelção de dados para o dataset ---- completo
+ 1.2 - dataset com os dados ----- Completo
  
 2 - desenvolvimento do algoritimo de reconhecimento do dataset e previsão de altas/baixas
  2.0 - procurar o tipo de algoritimo a ser usado
