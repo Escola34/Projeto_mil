@@ -4,18 +4,19 @@ passos - projeto mil
      OBS.1 - considerações (Uso do api_yahoo_finance2(DEscartada). Será usado a API Alpha_vantage(Descartada))
      OBS.2 - Uso de uma nova API IQoptionAPI que entrega os valores em tempo real(https://github.com/Lu-Yi-Hsun/iqoptionapi)
  1.0 - coletar resultados em tempo real das altas/baixas----- Completo
- 1.1 - coelção de dados para o dataset ---- completo
- 1.2 - dataset com os dados ----- Completo
+ 1.1 - Coleção de dados para o dataset ----- completo
+ 1.2 - dataset com os dados formatados ----- Completo
  
 2 - desenvolvimento do algoritimo de reconhecimento do dataset e previsão de altas/baixas
  2.0 - procurar o tipo de algoritimo a ser usado
+    OBS.1- Algoritimo escolhido para a tarefa foi Regressão Linear(Será usado Sklearn)
  2.1 - procuarar  estratégia e converter em linguagen de maquina(Python)
- 2.2 - aprendizagen da maquina usando os dados
+ 2.2 - aprendizagem da maquina usando os dados
 
 3 - Integração e automatização das compras do sistema
- 3.0 - Encontrar o mlhor sistema de trade para a venda e compra de cotações 
- 3.1 - altomatizar a venda e compra das cotações
- 3.2 - junção de todas as parte 
+ 3.0 - Encontrar o melhor sistema de trade para a venda e compra de cotações ----- IQoption
+ 3.1 - automatizar a venda e compra dos ativos
+ 3.2 - junção de todas as partes
 
 4 - fase de testes 
  4.0 - treino real do algoritimo 
