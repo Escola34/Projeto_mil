@@ -12,7 +12,7 @@ def main():
 			esc.close()
 	else:
 		pass
-	iq=IQ_Option("miqueias258@hotmail.com","mr.robotd23")
+	iq=IQ_Option("@.com","")
 	iq.set_max_reconnect(-1)
 	if iq.check_connect() == True:
 		while True:
