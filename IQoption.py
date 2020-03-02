@@ -4,39 +4,37 @@ import time
 from os import path 
 import pprint
 from iqoptionapi.stable_api import IQ_Option
-import time
-
 
 def main():
-	if path.exists("iqdataset.csv") == False:
+	if not path.exists("iqdataset.csv"):
 		with open("iqdataset.csv", 'w') as esc:
-			esc.write("{};{}".format("timestamp","varkandle\n"))
+			esc.write("timestamp;varkandle\n")
 			esc.close()
 	else:
 		pass
-	iq=IQ_Option("","")#Login do user
+	iq = IQ_Option("","") # Login do user
 	iq.set_max_reconnect(-1)
-	if iq.check_connect() == True:
+	if iq.check_connect():
 		while True:
-			time.sleep(15)#Tempo para coletar, e sim, isso causa no resultado influência!
+			time.sleep(15) #Tempo para coletar, e sim, isso causa no resultado influência!
 			try:			
-				goal="EURUSD"# ATIVO 
-				size=1
-				maxdict=10
-				iq.start_candles_stream(goal,size,maxdict)
-				cc=iq.get_realtime_candles(goal, 1)
-				pp = pprint.PrettyPrinter(depth=8)
-				inti = cc
-				tim = time.time()
+				goal     = "EURUSD" # ATIVO 
+				size     = 1
+				maxdict  = 10
+				iq.start_candles_stream(goal, size, maxdict)
+				cc       = iq.get_realtime_candles(goal, 1)
+				pp       = pprint.PrettyPrinter(depth = 8)
+				inti     = cc
+				tim      = time.time()
 				end_time = int(tim) - 0.8
-				end_cap = inti[int(end_time)]["min"]
+				end_cap  = inti[int(end_time)]["min"]
 				with open("iqdataset.csv", "a") as file:
-					file = file.write("{};{}\n".format(end_time,end_cap))
+					file = file.write(f"{end_time};{end_cap}\n")
 					print(file)
 			except Exception as e:
 				print("ERRO:", e)
 				continue
-	if iq.check_connect() == False:
+	if not iq.check_connect():
 		iq.connect()
 		main()
 
