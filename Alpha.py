@@ -2,20 +2,20 @@
 import requests
 import csv
 
-api_key = ""
-url = "https://www.alphavantage.co/query?"
+api_key     = ""
+url         = "https://www.alphavantage.co/query?"
 
 querystring = {
-				"outputsize":"full",
-				"datatype":"csv",
-				"symbol":"BTC-USD",
-				"function":"TIME_SERIES_INTRADAY",
-				"interval":"1min",
-				"apikey":api_key
-				}
+	"outputsize": "full",
+	"datatype"  : "csv",
+	"symbol"    : "BTC-USD",
+	"function"  : "TIME_SERIES_INTRADAY",
+	"interval"  : "1min",
+	"apikey"    : api_key
+}
 
-response = requests.request("GET", url, params=querystring)
-res = response.text
+response    = requests.request("GET", url, params = querystring)
+res         = response.text
 
 with open('dataset.csv', 'a') as csvfile:
 	file = csvfile.write(res)
