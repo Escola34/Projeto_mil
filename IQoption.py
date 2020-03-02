@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+
 import time
 from os import path 
 import pprint
 from iqoptionapi.stable_api import IQ_Option
+import time
 
 
 def main():
@@ -12,12 +14,13 @@ def main():
 			esc.close()
 	else:
 		pass
-	iq=IQ_Option("@.com","")
+	iq=IQ_Option("","")#Login do user
 	iq.set_max_reconnect(-1)
 	if iq.check_connect() == True:
 		while True:
+			time.sleep(15)#Tempo para coletar, e sim, isso causa no resultado influência!
 			try:			
-				goal="EURJPY"
+				goal="EURUSD"# ATIVO 
 				size=1
 				maxdict=10
 				iq.start_candles_stream(goal,size,maxdict)
@@ -39,4 +42,5 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
 
