@@ -35,10 +35,10 @@ while True:
 		fit            = model.fit(x_values, y_values)
 		preditx        = model.predict(x_values)
 		MSE            = mean_squared_error(y_values, preditx)
-		CED            = r2_score(y_values, preditx)
+		CED            = round(r2_score(y_values, preditx), 2)
 		tu             = strftime("%H:%M:%S")
 		print("MeSE", MSE)
-		print("R2:%.2f" %(CED), "|", tu)
+		print(f"R2:{CED}|{tu}")
 	except  Exception as E:
 		print(E)
 
