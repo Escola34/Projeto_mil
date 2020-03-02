@@ -2,7 +2,7 @@
 import requests
 import csv
 
-api_key = "KCCEK7NQHS377BWD"
+api_key = ""
 url = "https://www.alphavantage.co/query?"
 
 querystring = {
